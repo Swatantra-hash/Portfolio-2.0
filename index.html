@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swatantra Trivedi – Cybersecurity Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Swatantra Trivedi – Cybersecurity student focusing on Pentesting, Web Security, and Cloud Security." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Inter", "ui-sans-serif", "system-ui"],
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,.2)",
+          },
+          colors: {
+            cyber: {
+              50: "#f5f7ff",
+              100: "#e6ecff",
+              200: "#cbd6ff",
+              300: "#9fb3ff",
+              400: "#6a86ff",
+              500: "#3b57ff",
+              600: "#2238e6",
+              700: "#1a2bb3",
+              800: "#152389",
+              900: "#121e6d",
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Favicon (optional) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🛡️</text></svg>">
+
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Gradient text helper */
+    .grad-text {
+      background: linear-gradient(90deg, #6a86ff, #22d3ee, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .interactive-card {
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .interactive-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100 font-display">
+  <!-- NAVBAR -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-gray-950/60 border-b border-white/10">
+    <nav class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 font-bold text-lg tracking-wide">
+        <span class="text-cyan-300">🛡️</span>
+        <span class="grad-text">Swatantra Trivedi</span>
+      </a>
+      <button id="mobileToggle" class="md:hidden p-2 rounded-xl border border-white/10">☰</button>
+      <ul id="navLinks" class="hidden md:flex items-center gap-6 text-sm">
+        <li><a class="hover:text-cyan-300" href="#about">About</a></li>
+        <li><a class="hover:text-cyan-300" href="#skills">Skills</a></li>
+        <li><a class="hover:text-cyan-300" href="#projects">Projects</a></li>
+        <li><a class="hover:text-cyan-300" href="#tryhackme">THM Profile</a></li>
+        <li><a class="hover:text-cyan-300" href="#certificates">Certificates</a></li>
+        <li><a class="hover:text-cyan-300" href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/swatantra-trivedi88898" target="_blank" rel="noopener"
+            class="px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-400/30">
+            LinkedIn ↗
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-gray-950/95">
+      <ul class="px-6 py-4 space-y-3 text-sm">
+        <li><a class="block hover:text-cyan-300" href="#about">About</a></li>
+        <li><a class="block hover:text-cyan-300" href="#skills">Skills</a></li>
+        <li><a class="block hover:text-cyan-300" href="#projects">Projects</a></li>
+        <li><a class="block hover:text-cyan-300" href="#tryhackme">THM Profile</a></li>
+        <li><a class="block hover:text-cyan-300" href="#certificates">Certificates</a></li>
+        <li><a class="block hover:text-cyan-300" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="pt-28 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-30" aria-hidden="true">
+      <div class="absolute -top-24 -left-24 w-80 h-80 bg-cyan-500/30 blur-3xl rounded-full"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-fuchsia-500/20 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <!-- <img src="img/1758023831033 45.jpg" alt="Swatantra Trivedi" class="w-34 h-34 md:w-28 md:h-28 rounded-full mb-5 border-4 border-white/10 shadow-soft"> -->
+
+        <img src="img/1758023831033 45.jpg" alt="Swatantra Trivedi"
+          class="w-36 h-36 md:w-32 md:h-32 rounded-full mb-5 border-4 border-white/10 shadow-soft">
+
+        <p class="text-cyan-300/80 text-xs tracking-widest uppercase mb-3">Cybersecurity Portfolio</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Hi, I'm <span class="grad-text">Swatantra Trivedi</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-300 max-w-2xl">
+          B.Tech Cybersecurity student · Pentesting | Web Security | Cloud Security. I love breaking things (ethically)
+          and building defenses that scale.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects"
+            class="px-5 py-3 rounded-2xl bg-cyan-500 text-gray-900 font-semibold hover:bg-cyan-400 transition shadow-soft">View
+            Projects</a>
+          <a href="#contact"
+            class="px-5 py-3 rounded-2xl border border-white/20 hover:border-cyan-400/50 hover:bg-white/5 transition">Contact
+            Me</a>
+        </div>
+        <div class="mt-6 text-sm text-gray-400 flex items-center gap-2">
+          <span class="inline-block w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+          <span>Open to internships: Penetration Tester, SOC Analyst</span>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div
+          class="aspect-square rounded-3xl bg-gradient-to-br from-cyan-500/20 via-indigo-500/10 to-fuchsia-500/10 border border-white/10 p-1">
+          <div class="w-full h-full rounded-2xl bg-gray-900 grid grid-cols-2 sm:grid-cols-4 gap-2 p-3">
+            <div class="col-span-2 sm:col-span-4 rounded-xl bg-gray-800/70 border border-white/10 p-4">
+              <pre class="text-xs md:text-sm leading-relaxed overflow-auto"><code id="hero-code-animation">// threat-model.js
+const assets = ["User Data", "API", "DB"];
+const threats = ["XSS", "SQLi", "CSRF", "IDOR"];
+const mitigations = {
+  XSS: "CSP, output encode, sanitize",
+  SQLi: "Parameterized queries, least privilege",
+  CSRF: "SameSite cookies, tokens",
+  IDOR: "RBAC, object-level checks",
+};
+console.table(mitigations);
+</code></pre>
+            </div>
+            <div
+              class="rounded-xl bg-gray-800/70 border border-white/10 p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-cyan-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <p class="text-xs text-gray-300">Burp Suite Pro</p>
+              </div>
+              <div class="mt-2 h-2 w-full bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-4/5 bg-cyan-400"></div>
+              </div>
+            </div>
+            <div
+              class="rounded-xl bg-gray-800/70 border border-white/10 p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-indigo-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+                <p class="text-xs text-gray-300">Nmap & Recon</p>
+              </div>
+              <div class="mt-2 h-2 w-full bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-5/6 bg-indigo-400"></div>
+              </div>
+            </div>
+            <div
+              class="rounded-xl bg-gray-800/70 border border-white/10 p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-fuchsia-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path>
+                  <path d="M8 16.25V18a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-1.75"></path>
+                </svg>
+                <p class="text-xs text-gray-300">Kali Linux</p>
+              </div>
+              <div class="mt-2 h-2 w-full bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-11/12 bg-fuchsia-400"></div>
+              </div>
+            </div>
+            <div
+              class="rounded-xl bg-gray-800/70 border border-white/10 p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+                <p class="text-xs text-gray-300">Cloud Sec</p>
+              </div>
+              <div class="mt-2 h-2 w-full bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-2/3 bg-emerald-400"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">About Me</h2>
+        <p class="mt-4 text-gray-300">I'm a B.Tech student specializing in Cybersecurity at Veer Madho Singh Bhandari Uttarakhand Technical University (VMSBUTU). I enjoy
+          discovering vulnerabilities in web apps, practicing responsible disclosure, and hardening systems.
+        </p>
+        <ul class="mt-6 space-y-2 text-gray-300 text-sm">
+          <li>• Interests: Pentesting, Cloud Security, Blue/Red Teaming</li>
+          <li>• Current learning: CEH topics, PT1, SAL/PET pathways</li>
+          <li>• Tools I like: Kali, Burp Suite, Wireshark, nmap, Metasploit</li>
+        </ul>
+        <div class="mt-6 flex gap-3">
+          <a href="https://github.com/Swatantra-hash" target="_blank"
+            class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10">GitHub ↗</a>
+          <a href="mailto:trivediswatantra1@gmail.com"
+            class="px-4 py-2 rounded-xl bg-cyan-500 text-gray-900 font-semibold hover:bg-cyan-400">Email Me</a>
+        </div>
+      </div>
+
+      <div class="mt-12 max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        <div
+          class="interactive-card rounded-2xl p-6 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 hover:border-cyan-400/40">
+          <p class="text-sm text-cyan-300">Focus</p>
+          <h3 class="text-xl font-semibold mt-1">Web Application Security</h3>
+          <p class="text-gray-300 mt-2 text-sm">OWASP Top 10, input validation, auth flows, session security, logging &
+            monitoring.</p>
+        </div>
+        <div
+          class="interactive-card rounded-2xl p-6 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 hover:border-fuchsia-400/40">
+          <p class="text-sm text-fuchsia-300">Focus</p>
+          <h3 class="text-xl font-semibold mt-1">Cloud & Identity</h3>
+          <p class="text-gray-300 mt-2 text-sm">IAM, S3 security, least privilege, secrets management, basic threat
+            modeling.</p>
+        </div>
+        <div
+          class="interactive-card rounded-2xl p-6 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 hover:border-emerald-400/40">
+          <p class="text-sm text-emerald-300">Focus</p>
+          <h3 class="text-xl font-semibold mt-1">Red Team Essentials</h3>
+          <p class="text-gray-300 mt-2 text-sm">Recon, exploitation basics, payloads, post-exploitation hygiene,
+            reporting.</p>
+        </div>
+        <div
+          class="interactive-card rounded-2xl p-6 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 hover:border-amber-400/40">
+          <p class="text-sm text-amber-300">Focus</p>
+          <h3 class="text-xl font-semibold mt-1">Blue Team Essentials</h3>
+          <p class="text-gray-300 mt-2 text-sm">SIEM, log analysis, incident response playbooks, detections, KQL basics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20 border-t border-white/10 bg-gradient-to-b from-gray-950 to-gray-900">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10">Skills</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Card -->
+        <div
+          class="skill-card interactive-card rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-cyan-400/40">
+          <h3 class="font-semibold text-lg">Pentesting</h3>
+          <p class="text-sm text-gray-300 mt-2">Burp Suite, OWASP, recon & exploitation basics, report writing.</p>
+          <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-full w-4/5 bg-cyan-400"></div>
+          </div>
+        </div>
+        <div
+          class="skill-card interactive-card rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-fuchsia-400/40">
+          <h3 class="font-semibold text-lg">Programming</h3>
+          <p class="text-sm text-gray-300 mt-2">Python and C++ for building tools and understanding systems-level code.
+          </p>
+          <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-full w-3/4 bg-fuchsia-400"></div>
+          </div>
+        </div>
+        <div
+          class="skill-card interactive-card rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-emerald-400/40">
+          <h3 class="font-semibold text-lg">Cloud Security</h3>
+          <p class="text-sm text-gray-300 mt-2">IAM, S3 policies, network ACLs, basic threat modeling.</p>
+          <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-full w-2/3 bg-emerald-400"></div>
+          </div>
+        </div>
+        <div
+          class="skill-card interactive-card rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-400/40">
+          <h3 class="font-semibold text-lg">Blue Team</h3>
+          <p class="text-sm text-gray-300 mt-2">SIEM, log analysis, detection engineering fundamentals.</p>
+          <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-full w-3/5 bg-amber-400"></div>
+          </div>
+        </div>
+        <div
+          class="skill-card interactive-card rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-rose-400/40">
+          <h3 class="font-semibold text-lg">Web Technologies</h3>
+          <p class="text-sm text-gray-300 mt-2">HTML, CSS, and JavaScript for understanding client-side vulnerabilities.
+          </p>
+          <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-full w-2/5 bg-rose-400"></div>
+          </div>
+        </div>
+        <div
+          class="skill-card interactive-card rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-indigo-400/40">
+          <h3 class="font-semibold text-lg">Scripting & Databases</h3>
+          <p class="text-sm text-gray-300 mt-2">Bash for automation and basic SQL for database interaction and injection
+            analysis.</p>
+          <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-full w-1/2 bg-indigo-400"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6 mb-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Featured Projects</h2>
+          <p class="text-gray-300 mt-2">A few things I've built and shipped.</p>
+        </div>
+        <a href="https://github.com/Swatantra-hash" target="_blank"
+          class="hidden md:inline-flex px-4 py-2 rounded-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/5">All
+          Repos ↗</a>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <article
+          class="proj-card rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-400/40 transition">
+          <div class="h-40 bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20"></div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg">Password Strength Checker</h3>
+            <p class="text-sm text-gray-300 mt-2">Client-side password entropy estimator with live feedback, visibility
+              toggle, and UX tips.</p>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a href="https://swatantra-hash.github.io/Password-Strength-Checker/" target="_blank"
+                class="px-3 py-1.5 rounded-lg bg-cyan-500 text-gray-900 font-medium hover:bg-cyan-400">Live Demo</a>
+              <a href="https://github.com/Swatantra-hash/Password-Strength-Checker" target="_blank"
+                class="px-3 py-1.5 rounded-lg border border-white/10 hover:border-cyan-400/50">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 (example) -->
+        <article
+          class="proj-card rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-400/40 transition">
+          <div class="h-40 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20"></div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg">Firewall Setup & Hardening</h3>
+            <p class="text-sm text-gray-300 mt-2">Configured UFW on a Linux server, established ingress/egress rules,
+              and implemented logging for security monitoring.</p>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a href="#"
+                class="px-3 py-1.5 rounded-lg bg-cyan-500 text-gray-900 font-medium pointer-events-none opacity-60">Details
+                (private)</a>
+              <a href="#" class="px-3 py-1.5 rounded-lg border border-white/10 pointer-events-none opacity-60">Source
+                (soon)</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 (placeholder) -->
+        <article
+          class="proj-card rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-400/40 transition">
+          <div class="h-40 bg-gradient-to-br from-amber-500/20 to-rose-500/20"></div>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg">Web Vuln Scanner (mini)</h3>
+            <p class="text-sm text-gray-300 mt-2">Simple Python script to scan common misconfigs (headers, TLS,
+              directory listing).</p>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a href="#contact" class="px-3 py-1.5 rounded-lg bg-cyan-500 text-gray-900 font-medium">Request Demo</a>
+              <a href="#" class="px-3 py-1.5 rounded-lg border border-white/10 pointer-events-none opacity-60">Source
+                (soon)</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRYHACKME PROFILE -->
+  <section id="tryhackme" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">TryHackMe Profile</h2>
+      <p class="text-gray-300 mb-10 max-w-3xl">I'm an active learner on TryHackMe, where I practice my skills and
+        compete with others. I'm proud to be ranked among the top users globally.</p>
+
+      <div
+        class="thm-card rounded-3xl p-6 md:p-8 bg-gradient-to-br from-fuchsia-900/30 via-gray-900 to-gray-950 border border-white/10 shadow-soft grid md:grid-cols-3 items-center gap-8">
+        <div class="md:col-span-1 text-center">
+          <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3802878"
+            style="border:none; width: 100%; max-width: 350px; height: 160px;" class="mx-auto"></iframe>
+        </div>
+        <div class="md:col-span-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+            <div class="rounded-xl bg-gray-900/50 p-4 border border-white/10">
+              <p class="text-3xl sm:text-4xl font-bold grad-text">Top 4%</p>
+              <p class="text-sm text-gray-300 mt-1">Worldwide Rank</p>
+            </div>
+            <div class="rounded-xl bg-gray-900/50 p-4 border border-white/10">
+              <p class="text-3xl sm:text-4xl font-bold text-gray-100">20+</p>
+              <p class="text-sm text-gray-300 mt-1">Badges Earned</p>
+            </div>
+          </div>
+          <p class="mt-6 text-gray-300">My profile showcases my dedication to continuous learning, with numerous
+            completed rooms covering offensive and defensive security topics.</p>
+          <div class="mt-6">
+            <a href="https://tryhackme.com/p/swatantra" target="_blank"
+              class="px-5 py-3 rounded-2xl bg-cyan-500 text-gray-900 font-semibold hover:bg-cyan-400 transition">View My
+              THM Profile ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="py-20 border-t border-white/10 bg-gray-950">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10">Certificates</h2>
+      <p class="text-gray-300 mb-12">Some of my verified certifications in Cybersecurity.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Certificate 1 -->
+        <div class="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-cyan-400/40 transition shadow-soft">
+          <h3 class="font-semibold text-lg">Cyber Security 101 Certificate</h3>
+          <p class="text-sm text-gray-300 mt-2">Fundamentals of cybersecurity concepts and practices.</p>
+          <ul class="mt-3 text-xs text-gray-400 space-y-1">
+            <li><span class="font-semibold text-gray-200">Issuer:</span> TryHackMe</li>
+            <li><span class="font-semibold text-gray-200">Issued:</span> Aug 2025</li>
+            <li><span class="font-semibold text-gray-200">Expires:</span> Aug 2028</li>
+            <li><span class="font-semibold text-gray-200">ID:</span> THM-N7VX0NMMKI</li>
+          </ul>
+          <div class="mt-4">
+            <a href="https://tryhackme.com/certificate/THM-N7VX0NMMKI" target="_blank"
+              class="inline-block px-4 py-2 text-sm rounded-xl bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 transition">
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div
+          class="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-fuchsia-400/40 transition shadow-soft">
+          <h3 class="font-semibold text-lg">Web Fundamentals Certificate</h3>
+          <p class="text-sm text-gray-300 mt-2">Core concepts of web technologies and cybersecurity basics.</p>
+          <ul class="mt-3 text-xs text-gray-400 space-y-1">
+            <li><span class="font-semibold text-gray-200">Issuer:</span> TryHackMe</li>
+            <li><span class="font-semibold text-gray-200">Issued:</span> Aug 2025</li>
+            <li><span class="font-semibold text-gray-200">Expires:</span> Aug 2029</li>
+            <li><span class="font-semibold text-gray-200">ID:</span> THM-VOJRDCFVPP</li>
+          </ul>
+          <div class="mt-4">
+            <a href="https://tryhackme.com/certificate/THM-VOJRDCFVPP" target="_blank"
+              class="inline-block px-4 py-2 text-sm rounded-xl bg-fuchsia-500/20 text-fuchsia-300 hover:bg-fuchsia-500/30 transition">
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div
+          class="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-emerald-400/40 transition shadow-soft">
+          <h3 class="font-semibold text-lg">Pre Security Certificate</h3>
+          <p class="text-sm text-gray-300 mt-2">Introductory level knowledge covering security foundations.</p>
+          <ul class="mt-3 text-xs text-gray-400 space-y-1">
+            <li><span class="font-semibold text-gray-200">Issuer:</span> TryHackMe</li>
+            <li><span class="font-semibold text-gray-200">Issued:</span> Jul 2025</li>
+            <li><span class="font-semibold text-gray-200">Expires:</span> Jul 2029</li>
+            <li><span class="font-semibold text-gray-200">ID:</span> THM-A6N0XTZPXK</li>
+          </ul>
+          <div class="mt-4">
+            <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-A6N0XTZPXK.pdf" target="_blank"
+              class="inline-block px-4 py-2 text-sm rounded-xl bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 transition">
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 4: Deloitte -->
+        <div class="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-rose-400/40 transition shadow-soft">
+          <h3 class="font-semibold text-lg">Deloitte Australia - Cyber Job Simulation</h3>
+          <p class="text-sm text-gray-300 mt-2">Completed a job simulation covering cyber defense and incident response
+            tasks.</p>
+          <ul class="mt-3 text-xs text-gray-400 space-y-1">
+            <li><span class="font-semibold text-gray-200">Issuer:</span> Forage</li>
+            <li><span class="font-semibold text-gray-200">Issued:</span> Sep 2025</li>
+            <li><span class="font-semibold text-gray-200">Expires:</span> N/A</li>
+            <li><span class="font-semibold text-gray-200">ID:</span> k4BrQx4c8i8YyEjav</li>
+          </ul>
+          <div class="mt-4">
+            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_9tFiRjHEFTuGzn9mE_1757876370372_completion_certificate.pdf"
+              target="_blank"
+              class="inline-block px-4 py-2 text-sm rounded-xl bg-rose-500/20 text-rose-300 hover:bg-rose-500/30 transition">
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 5: Jr Pentester -->
+        <div class="rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-sky-400/40 transition shadow-soft">
+          <h3 class="font-semibold text-lg">Jr Penetration Tester Certificate</h3>
+          <p class="text-sm text-gray-300 mt-2">Completed the Jr Penetration Tester pathway, validating practical
+            ethical hacking skills.</p>
+          <ul class="mt-3 text-xs text-gray-400 space-y-1">
+            <li><span class="font-semibold text-gray-200">Issuer:</span> TryHackMe</li>
+            <li><span class="font-semibold text-gray-200">Issued:</span> Sep 2025</li>
+            <li><span class="font-semibold text-gray-200">Expires:</span> Sep 2028</li>
+            <li><span class="font-semibold text-gray-200">ID:</span> THM-WBNJQYFHCE</li>
+          </ul>
+          <div class="mt-4">
+            <a href="https://tryhackme.com/certificate/THM-WBNJQYFHCE" target="_blank"
+              class="inline-block px-4 py-2 text-sm rounded-xl bg-sky-500/20 text-sky-300 hover:bg-sky-500/30 transition">
+              View Certificate
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 border-t border-white/10 bg-gray-900">
+    <div class="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold">Contact</h2>
+      <p class="text-gray-300 mt-2">Got an opportunity, collaboration, or feedback? Drop a message — I'll get back
+        quickly.</p>
+
+      <form id="contactForm" class="mt-8 space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-gray-300">Name</label>
+            <input required type="text" name="name"
+              class="mt-1 w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              placeholder="Your name" />
+          </div>
+          <div>
+            <label class="text-sm text-gray-300">Email</label>
+            <input required type="email" name="email"
+              class="mt-1 w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              placeholder="you@example.com" />
+          </div>
+        </div>
+        <div>
+          <label class="text-sm text-gray-300">Message</label>
+          <textarea required name="message" rows="5"
+            class="mt-1 w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            placeholder="Tell me about your idea…"></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <p class="text-xs text-gray-400">This form uses <span class="text-gray-200">mailto:</span> — no backend
+            needed.</p>
+          <button type="submit"
+            class="px-5 py-3 rounded-2xl bg-cyan-500 text-gray-900 font-semibold hover:bg-cyan-400">Send
+            Message</button>
+        </div>
+      </form>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="mailto:trivediswatantra1@gmail.com"
+          class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Email
+        </a>
+        <a href="https://www.linkedin.com/in/swatantra-trivedi88898" target="_blank"
+          class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/Swatantra-hash" target="_blank"
+          class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-white/10">
+    <div
+      class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <p class="text-sm text-gray-400">© <span id="year"></span> Swatantra Trivedi.</p>
+      <div class="text-xs text-gray-500">Theme: Cyber Night • Built for performance & accessibility.</div>
+    </div>
+  </footer>
+
+  <!-- JS: nav, form, animations -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact form -> mailto
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = encodeURIComponent(data.get('name'));
+      const email = encodeURIComponent(data.get('email'));
+      const message = encodeURIComponent(data.get('message'));
+
+      const subject = `Portfolio Contact from ${name}`;
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message}`;
+      window.location.href = `mailto:trivediswatantra1@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    // GSAP animations
+    window.addEventListener('load', () => {
+      const { gsap } = window;
+      if (!gsap) return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero code typing animation
+      const codeBlock = document.getElementById('hero-code-animation');
+      if (codeBlock) {
+        const code = codeBlock.textContent.trim();
+        let i = 0;
+
+        function typeCode() {
+          if (i < code.length) {
+            codeBlock.textContent += code.charAt(i);
+            i++;
+            const randomDelay = Math.random() * (80 - 30) + 30;
+            setTimeout(typeCode, randomDelay);
+          } else {
+            // Wait 3 seconds, then restart the animation
+            setTimeout(() => {
+              codeBlock.textContent = '';
+              i = 0;
+              typeCode();
+            }, 3000);
+          }
+        }
+
+        // Clear the block initially and start typing
+        codeBlock.textContent = '';
+        setTimeout(typeCode, 1000);
+      }
+
+      // Hero entrance
+      gsap.from('#home h1', { y: 20, opacity: 0, duration: 0.9, ease: 'power3.out' });
+      gsap.from('#home p', { y: 20, opacity: 0, duration: 0.9, delay: 0.15, ease: 'power3.out' });
+      gsap.from('#home a', { y: 10, opacity: 0, duration: 0.8, delay: 0.3, stagger: 0.1 });
+
+      // About cards
+      gsap.utils.toArray('#about .rounded-2xl').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 80%' },
+          y: 30, opacity: 0, duration: 0.6, delay: i * 0.05
+        });
+      });
+
+      // Skills cards
+      gsap.utils.toArray('.skill-card').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 85%' },
+          y: 40, opacity: 0, duration: 0.6, ease: 'power2.out', delay: i * 0.05
+        });
+      });
+
+      // Project cards
+      gsap.utils.toArray('.proj-card').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 85%' },
+          y: 40, opacity: 0, duration: 0.6, ease: 'power2.out', delay: i * 0.06
+        });
+      });
+
+      // THM card
+      gsap.from('.thm-card', {
+        scrollTrigger: { trigger: '.thm-card', start: 'top 80%' },
+        y: 40, opacity: 0, duration: 0.8, ease: 'power2.out'
+      });
+
+      // Certificate cards
+      gsap.utils.toArray('#certificates .rounded-2xl').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 85%' },
+          y: 40, opacity: 0, duration: 0.6, ease: 'power2.out', delay: i * 0.06
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>-
