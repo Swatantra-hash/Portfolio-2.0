@@ -140,7 +140,7 @@
             Me</a>
         </div>
         <div class="mt-6 text-sm text-gray-400 flex items-center gap-2">
-          <span class="inline-block w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+          <span class="inline-block w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span
           <span>Open to internships: Penetration Tester, SOC Analyst</span>
         </div>
       </div>
@@ -693,13 +693,21 @@ console.table(mitigations);
       // Hero entrance
       gsap.from('#home h1', { y: 20, opacity: 0, duration: 0.9, ease: 'power3.out' });
       gsap.from('#home p', { y: 20, opacity: 0, duration: 0.9, delay: 0.15, ease: 'power3.out' });
-      gsap.from('#home a', { y: 10, opacity: 0, duration: 0.8, delay: 0.3, stagger: 0.1 });
 
       // About cards
       gsap.utils.toArray('#about .rounded-2xl').forEach((card, i) => {
-        gsap.from(card, {
-          scrollTrigger: { trigger: card, start: 'top 80%' },
-          y: 30, opacity: 0, duration: 0.6, delay: i * 0.05
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top 80%',
+          onEnter: () => {
+            gsap.from(card, {
+              y: 30,
+              opacity: 0,
+              duration: 0.6,
+              delay: i * 0.05,
+              clearProps: 'all',
+            });
+          },
         });
       });
 
@@ -736,4 +744,4 @@ console.table(mitigations);
   </script>
 </body>
 
-</html>-
+</html>
