@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,10 +118,16 @@
 
     <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <!-- <img src="img/1758023831033 45.jpg" alt="Swatantra Trivedi" class="w-34 h-34 md:w-28 md:h-28 rounded-full mb-5 border-4 border-white/10 shadow-soft"> -->
-
-        <img src="img/1758023831033 45.jpg" alt="Swatantra Trivedi"
-          class="w-36 h-36 md:w-32 md:h-32 rounded-full mb-5 border-4 border-white/10 shadow-soft">
+        <div class="relative w-36 h-36 md:w-32 md:h-32 mb-5">
+          <div
+            class="absolute -z-10 -top-4 -left-4 w-32 h-32 bg-cyan-500/50 rounded-full blur-2xl opacity-90 animate-pulse">
+          </div>
+          <div
+            class="absolute -z-10 -bottom-4 -right-4 w-32 h-32 bg-fuchsia-500/50 rounded-full blur-2xl opacity-90 animate-pulse"
+            style="animation-delay: 1s;"></div>
+          <img src="img/1758023831033 45.jpg" alt="Swatantra Trivedi"
+            class="relative w-full h-full rounded-full border-4 border-white/10 shadow-soft">
+        </div>
 
         <p class="text-cyan-300/80 text-xs tracking-widest uppercase mb-3">Cybersecurity Portfolio</p>
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
@@ -139,10 +145,16 @@
             class="px-5 py-3 rounded-2xl border border-white/20 hover:border-cyan-400/50 hover:bg-white/5 transition">Contact
             Me</a>
         </div>
-        <div class="mt-6 text-sm text-gray-400 flex items-center gap-2">
-          <span class="inline-block w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span
-          <span>Open to internships: Penetration Tester, SOC Analyst</span>
+        <!-- <div class="mt-6 text-sm text-gray-400 flex items-center gap-2">
+          <span class="inline-block w-5 h-5 bg-emerald-400 rounded-full animate-pulse"></span> Open to Internship; Penetration Tester, Cloud Security</span>
+        </div> -->
+        <div class="mt-6 text-base text-gray-400 flex items-center gap-2">
+          <span class="inline-block w-4 h-4 bg-emerald-400 rounded-full animate-pulse"></span>
+          Open to Internship; Penetration Tester, Cloud Security
         </div>
+
+
+
       </div>
 
       <div class="relative">
@@ -229,17 +241,18 @@ console.table(mitigations);
     <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold">About Me</h2>
-        <p class="mt-4 text-gray-300">I'm a B.Tech student specializing in Cybersecurity at Veer Madho Singh Bhandari Uttarakhand Technical University (VMSBUTU). I enjoy
+        <p class="mt-4 text-gray-300">I'm a B.Tech student specializing in Cybersecurity at Veer Madho Singh Bhandari
+          Uttarakhand Technical University (VMSBUTU). I enjoy
           discovering vulnerabilities in web apps, practicing responsible disclosure, and hardening systems.
         </p>
         <ul class="mt-6 space-y-2 text-gray-300 text-sm">
           <li>• Interests: Pentesting, Cloud Security, Blue/Red Teaming</li>
-          <li>• Current learning: CEH topics, PT1, SAL/PET pathways</li>
-          <li>• Tools I like: Kali, Burp Suite, Wireshark, nmap, Metasploit</li>
+          <li>• Current learning: CEH topics, Pentesting, Cloud Security, PET pathways</li>
+          <li>• Tools I like: Kali Linux, Burp Suite, Wireshark, nmap, Metasploit, TryHackMe</li>
         </ul>
         <div class="mt-6 flex gap-3">
           <a href="https://github.com/Swatantra-hash" target="_blank"
-            class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10">GitHub ↗</a>
+            class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10">Resume ↗</a>
           <a href="mailto:trivediswatantra1@gmail.com"
             class="px-4 py-2 rounded-xl bg-cyan-500 text-gray-900 font-semibold hover:bg-cyan-400">Email Me</a>
         </div>
@@ -356,7 +369,7 @@ console.table(mitigations);
         <!-- Project 1 -->
         <article
           class="proj-card rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-400/40 transition">
-          <div class="h-40 bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20"></div>
+          <img src="img/project1.png" alt="Password Strength Checker Project" class="w-full h-40 object-cover">
           <div class="p-5">
             <h3 class="font-semibold text-lg">Password Strength Checker</h3>
             <p class="text-sm text-gray-300 mt-2">Client-side password entropy estimator with live feedback, visibility
@@ -373,7 +386,7 @@ console.table(mitigations);
         <!-- Project 2 (example) -->
         <article
           class="proj-card rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-400/40 transition">
-          <div class="h-40 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20"></div>
+          <img src="img/project2.png" alt="Firewall Setup & Hardening Project" class="w-full h-40 object-cover">
           <div class="p-5">
             <h3 class="font-semibold text-lg">Firewall Setup & Hardening</h3>
             <p class="text-sm text-gray-300 mt-2">Configured UFW on a Linux server, established ingress/egress rules,
@@ -391,7 +404,7 @@ console.table(mitigations);
         <!-- Project 3 (placeholder) -->
         <article
           class="proj-card rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-cyan-400/40 transition">
-          <div class="h-40 bg-gradient-to-br from-amber-500/20 to-rose-500/20"></div>
+          <img src="img/project3.png" alt="Web Vulnerability Scanner Project" class="w-full h-40 object-cover">
           <div class="p-5">
             <h3 class="font-semibold text-lg">Web Vuln Scanner (mini)</h3>
             <p class="text-sm text-gray-300 mt-2">Simple Python script to scan common misconfigs (headers, TLS,
